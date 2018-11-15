@@ -6,4 +6,4 @@ We believe that minimising the technical burden of public services is a driver f
 
 # How it was made
 
-![Initial Plan](initial_plan.jpg)
+![Initial Plan](IMG_20181115_211422.jpg)
