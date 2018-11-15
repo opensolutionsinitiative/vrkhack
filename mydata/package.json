@@ -1,0 +1,24 @@
+{
+  "name": "mydata",
+  "version": "1.0.0",
+  "description": "VTJ MYDATA API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "export NODE_ENV=development && node index.js"
+  },
+  "author": "Toni Iltanen & Jaakko Korhonen",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "client": "0.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2",
+    "mongoose": "^5.3.12"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0"
+  }
+}

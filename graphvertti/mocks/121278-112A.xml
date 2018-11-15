@@ -1,0 +1,50 @@
+<VTJHenkiloVastaussanoma xsi:schemaLocation="http://xml.vrk.fi/schema/vtjkysely PERUSLT1.xsd" tietojenPoimintaaika="20151117112133" sanomatunnus="PERUSLT1" versio="1.0">
+<Asiakasinfo>
+ <InfoS>04.04.2012 12:11</InfoS>
+ <InfoR>04.04.2012 12:11</InfoR>
+ <InfoE>04.04.2012 12:11</InfoE>
+ </Asiakasinfo>
+ <Paluukoodi koodi="0000">Haku onnistui</Paluukoodi>
+<Hakuperusteet>
+ <Henkilotunnus hakuperustePaluukoodi="1" hakuperusteTekstiS="L�ytyi" hakuperusteTekstiR="Hittades" hakuperusteTekstiE="Found">121278-112A</Henkilotunnus>
+ </Hakuperusteet>
+<Henkilo>
+ <Henkilotunnus voimassaolokoodi="1">121278-112A</Henkilotunnus>
+<NykyinenSukunimi>
+ <Sukunimi>Möttönen</Sukunimi>
+ </NykyinenSukunimi>
+<NykyisetEtunimet>
+ <Etunimet>Matti Esko</Etunimet>
+ </NykyisetEtunimet>
+<Kotikunta>
+ <Kuntanumero>442</Kuntanumero>
+ <KuntaS>Joensuu</KuntaS>
+ <KuntaR>Joensuu</KuntaR>
+ <KuntasuhdeAlkupvm>19901212</KuntasuhdeAlkupvm>
+ </Kotikunta>
+<VakinainenKotimainenLahiosoite>
+ <LahiosoiteS>Jokikatu 34</LahiosoiteS>
+ <LahiosoiteR/>
+ <Postinumero>12335</Postinumero>
+ <PostitoimipaikkaS>JOENSUU</PostitoimipaikkaS>
+ <PostitoimipaikkaR>JOENSUU</PostitoimipaikkaR>
+ <AsuminenAlkupvm>19901212</AsuminenAlkupvm>
+ <AsuminenLoppupvm/>
+ </VakinainenKotimainenLahiosoite>
+<VakinainenUlkomainenLahiosoite>
+ <UlkomainenLahiosoite/>
+ <UlkomainenPaikkakuntaJaValtioS/>
+ <UlkomainenPaikkakuntaJaValtioR/>
+ <UlkomainenPaikkakuntaJaValtioSelvakielinen/>
+ <Valtiokoodi3/>
+ <AsuminenAlkupvm/>
+ <AsuminenLoppupvm/>
+ </VakinainenUlkomainenLahiosoite>
+<Aidinkieli>
+ <AidinkieliTietokoodi>1</AidinkieliTietokoodi>
+ </Aidinkieli>
+<Kuolintiedot>
+ <Kuolinpvm>20110404</Kuolinpvm>
+ </Kuolintiedot>
+ </Henkilo>
+ </VTJHenkiloVastaussanoma>
