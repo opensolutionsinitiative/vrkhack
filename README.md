@@ -1,4 +1,4 @@
-# VRK Hack
+# VRK Syysmyräkkä Hack
 This is the prototype of proposal for GraphQL application interfaces for VRK and other public services in Finland.
 
 We believe that minimising the technical burden of public services is a driver for local markets and innovation.
@@ -54,6 +54,11 @@ Example variables
 }
 ```
 Querys made with 310118-998M are the one shown on mydata-react
-# How it was made
+
+# Original Concept
 
 ![Initial Plan](IMG_20181115_211422.jpg)
+
+# Presentation
+
+https://docs.google.com/presentation/d/1YQMjTjkfRJ9HslK6J4iUehk1mN2oSNrDxbWhtd7eycQ/
