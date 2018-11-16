@@ -16,8 +16,8 @@ class App extends Component {
           {({ loading, error, data }) => {
             if (loading) return 'Loading...';
             if (error) return `Error! ${error.message}`;
-
             return (
+              data.MyDataByNationalID.length > 0 ?
               <section class="DataContainer">
               <p>
               <a class='fetchData' href={`data: text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(data))}`} download="mydata.json">Lataa omat tietosi</a>
@@ -25,7 +25,7 @@ class App extends Component {
               {data.MyDataByNationalID.map(item => (
                   <DataRelease key={item.id} organization={item.organization} requestedBy={item.requestedBy} released={item.released} />
               ))}
-              </section>
+              </section> : <section class="DataContainer"><span style={{fontWeight: 'normal', fontSize: '20px'}}>Ei luovutettuja henkilötietoja</span></section>
             );
           }}
         </Query>

@@ -11,13 +11,17 @@
   color: white;
 }
 
+.app-header {
+  width: 100%;
+}
+
 .App-link {
   color: #61dafb;
 }
 
 .DataContainer {
-  margin: 5%;
   width: 90%;
+  display: inline-block;
 }
 
 @keyframes App-logo-spin {
