@@ -3,6 +3,18 @@ import express from 'express'
 import express_graphql from 'express-graphql'
 import Schema from './schema'
 import cors from 'cors'
+import MyDataQuery from './query/mydataQuery'
+import MyDataMutation from './mutations/mydataMutation'
+
+const mydataQuery = new MyDataQuery()
+const mydataMutation = new MyDataMutation()
+
+var root = {
+    AddEvent: mydataMutation.createEvent,
+    MyDataByNationalID: mydataQuery.getMyData
+}
+
+mongoose.connect('mongodb://mongoadmin:secret@localhost/vrk?authSource=admin',{ useNewUrlParser: true }, function(err) { if(err) console.log(err) })
 
 var app = express();
 app.use(cors());

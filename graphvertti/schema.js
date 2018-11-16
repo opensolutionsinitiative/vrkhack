@@ -5,7 +5,7 @@ GRAPHVERTTI
 """
 type Query {
     "Find a person with natinonal id."
-    PersonByNationalID(Henkilotunnus: String!): VTJHenkiloVastaussanoma,
+    PersonByNationalID(Henkilotunnus: String!, SoSoNimi: String!, Loppukayttaja: String!): VTJHenkiloVastaussanoma,
 }
 
 """
