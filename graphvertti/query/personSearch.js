@@ -10,7 +10,7 @@ export default class PersonSearch {
     async getPersonByNationalId(args) { 
         let hetu = args.Henkilotunnus
         let loppukayttaja = args.Loppukayttaja
-        let released = new Date().toLocaleString()
+        let released = new Date()
         let organization = args.SoSoNimi
         let data = fs.readFileSync(path.join( __dirname ,`../mocks/${hetu}.xml`))
         if(!data) {
