@@ -1,0 +1,15 @@
+.dataRelease {
+    padding: 20px;
+    border: 2px solid white;
+    float: left;
+    display: block;
+    margin: 10px;
+    width: 300px;
+}
+.dataRelease p {
+    font-size: 0.8em;
+}
+
+.dataRelease h3 {
+    font-size: 1em;
+}
