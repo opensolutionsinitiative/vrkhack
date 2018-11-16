@@ -1,0 +1,94 @@
+version: '3.2'
+
+services:
+  mydataClient:
+    image: osioy/mydata-react
+    networks:
+      - net
+    ports:
+      - 80:3000
+    links:
+      - mydata
+    depends_on:
+      - "mydata"
+    environment: 
+      - REACT_APP_MYDATA_GRAPHQL=http://localhost:3002/graphql
+      - WAIT_HOSTS=mydata:3002
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+  mydata:
+    image: osioy/mydata-graphql
+    ports: 
+      - 3002:3002
+    links:
+      - mongodb
+    depends_on:
+      - "mongodb"
+    networks:
+      - net
+    environment: 
+      - MONGODB=mongodb
+      - WAIT_HOSTS=mongodb:27017
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+
+  graphvertti:
+    image: osioy/graphvertti
+    ports: 
+      - 3001:3001
+    links:
+      - mydata
+    depends_on:
+      - "mydata"
+    environment: 
+      - MYDATA_GRAPHQL=mydata
+    networks:
+      - net
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+
+  mongodb:
+    image: mongo:latest
+    ports: 
+      - 27017
+    networks:
+      - net
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      resources:
+        limits:
+          memory: 512M
+
+networks:
+  net:
+    driver: overlay
+    ipam:
+      driver: default

@@ -16,7 +16,7 @@ export default class PersonSearch {
         if(!data) {
             return null
         }
-        await request('http://localhost:3002/graphql', MyDataEvent,{
+        await request('http://' + (process.env.MYDATA_GRAPHQL ?  process.env.MYDATA_GRAPHQL : 'localhost') + ':3002/graphql', MyDataEvent,{
             event: {
                 released: released,
                 organization: organization,

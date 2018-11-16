@@ -13,8 +13,9 @@ var root = {
     AddEvent: mydataMutation.createEvent,
     MyDataByNationalID: mydataQuery.getMyData
 }
+var connectionstring = 'mongodb://mongoadmin:secret@' + (process.env.MONGODB ? process.env.MONGODB : 'localhost') + '/vrk?authSource=admin'
 
-mongoose.connect('mongodb://mongoadmin:secret@localhost/vrk?authSource=admin',{ useNewUrlParser: true }, function(err) { if(err) console.log(err) })
+mongoose.connect(connectionstring,{ useNewUrlParser: true }, function(err) { if(err) console.log(err) })
 
 var app = express();
 app.use(cors());
