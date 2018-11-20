@@ -27,7 +27,7 @@ type MyData {
 }
 
 """
-Input type for manufacturer.
+Input type for MyData.
 """
 input MyDataInput {
     requestedBy: String,
