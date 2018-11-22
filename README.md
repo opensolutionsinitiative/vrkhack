@@ -10,8 +10,11 @@ After docker installation, clone this repository.
 To start all the three apps, run the following command
 
 - Windows
+
     runWithDocker.bat
+    
 - Other
+
     sudo ./runWithDocker.sh (if will not launch, type chmod +x runWithDocker.sh and try again!)
 
 # To test app
